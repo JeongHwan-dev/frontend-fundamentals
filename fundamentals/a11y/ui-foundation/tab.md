@@ -53,10 +53,10 @@
 
 ::: tip ✅ 접근성을 지키면 이렇게 들려요
 메뉴, **탭 목록**<br />
-홈, **선택됨**, **탭**<br />
+홈, **탭**<br />
 관심, **탭**<br />
 발견, **탭**<br />
-피드, **탭**<br />
+피드, **선택됨**, **탭**<br />
 :::
 
 :::: info 예제 코드 해설
@@ -108,16 +108,16 @@
 
 ```tsx
 <div role="tablist" aria-label="메뉴">
-	<button role="tab" aria-selected={false} id="home-tab">홈</button>
-	<button role="tab" aria-selected={false} id="interest-tab">관심</button>
-	<button role="tab" aria-selected={false} id="discovery-tab">발견</button>
-	<button role="tab" aria-selected={true} id="feed-tab" aria-controls="feed-panel">피드</button>
+ <button role="tab" aria-selected={false} id="home-tab">홈</button>
+ <button role="tab" aria-selected={false} id="interest-tab">관심</button>
+ <button role="tab" aria-selected={false} id="discovery-tab">발견</button>
+ <button role="tab" aria-selected={true} id="feed-tab" aria-controls="feed-panel">피드</button>
 </div>
 <ul role="tabpanel" id="feed-panel" aria-labelledby="feed-tab">
-	<li>
-		<h3>탭 컴포넌트에서 접근성을 지키며 구현하는 법</h3>
-		<p>탭은 관련된 콘텐츠를 그룹화하여 공간을 절약하고 사용자가 원하는 정보에 빠르게 접근할 수 있도록 하는 컴포넌트예요.</p>
-	</li>
+ <li>
+  <h3>탭 컴포넌트에서 접근성을 지키며 구현하는 법</h3>
+  <p>탭은 관련된 콘텐츠를 그룹화하여 공간을 절약하고 사용자가 원하는 정보에 빠르게 접근할 수 있도록 하는 컴포넌트예요.</p>
+ </li>
 </ul>
 ```
 
